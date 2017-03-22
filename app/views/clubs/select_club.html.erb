@@ -1,0 +1,19 @@
+<h1>Choose your Club</h1>
+
+<div class="container">
+  <div class="row">
+    <% @clubs.each do |club| %>
+      <div class="col-xs-12 col-sm-4">
+        <div class="card">
+          <div class="card-category">Popular</div>
+          <div class="card-description">
+            <h2><%= link_to(club.name, new_club_customer_path(club)) %></h2>
+            <p><%= club.description %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<%= link_to('Create a new Club', new_club_path) %>

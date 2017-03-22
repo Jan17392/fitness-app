@@ -19,7 +19,7 @@ gem 'autoprefixer-rails'
 group :development, :test do
   gem 'binding_of_caller'
   gem 'better_errors'
-  
+
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'spring'
@@ -28,3 +28,9 @@ group :development, :test do
 end
 
 
+# Admin Theme
+gem 'gentelella-rails'
+gem 'coffee-rails', '~> 4.1.0'
+
+# Country Select for Simple_form_for
+gem 'country_select'
