@@ -42,3 +42,5 @@ gem 'devise'
 
 # Authorization for Actions
 gem "pundit"
+
+gem 'cloudinary'

@@ -1,3 +1,5 @@
+<h1>Create Club</h1>
+
 <%= simple_form_for @club do |f| %>
   <%= f.input :name %>
   <%= f.input :street %>
@@ -7,5 +9,5 @@
   <%= f.input :street_no %>
   <%= f.input :description %>
   <%= f.input :user_id, :as => :hidden, input_html: { value: current_user.id } %>
-  <%= f.button :submit, "Create Club" %>
+  <%= f.button :submit, "Create Club", html_option = { class: 'btn btn-primary'} %>
 <% end %>

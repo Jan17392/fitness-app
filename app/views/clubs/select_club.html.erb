@@ -1,19 +1,29 @@
-<h1>Choose your Club</h1>
-
 <div class="container">
   <div class="row">
+    <h1>Choose your Club</h1>
+  </div>
+
+  <div class="row">
     <% @clubs.each do |club| %>
-      <div class="col-xs-12 col-sm-4">
+      <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="card">
-          <div class="card-category">Popular</div>
+          <div class="card-category"></div>
           <div class="card-description">
             <h2><%= link_to(club.name, new_club_customer_path(club)) %></h2>
-            <p><%= club.description %></p>
+            <p>
+              <%= club.street %> <%= club.street_no %>,
+              <br>
+              <%= club.postcode %> <%= club.city %>,
+              <br>
+              <%= club.country %>
+            </p>
           </div>
         </div>
       </div>
     <% end %>
   </div>
-</div>
 
-<%= link_to('Create a new Club', new_club_path) %>
+  <div class="row">
+    <%= link_to('Create a new Club', new_club_path, html_option = { class: 'btn btn-primary'}) %>
+  </div>
+</div>

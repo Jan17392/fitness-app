@@ -1,0 +1,9 @@
+[0GSyntaxError: unexpected '>'
+curl http://lorempixel.com/800/600/city/9/ > san_francisco.jpg
+                                            ^
+NameError: undefined local variable or method `c' for main:Object
+from (pry):1:in `<main>'
+NameError: undefined local variable or method `irb' for main:Object
+from (pry):2:in `<main>'
+NameError: undefined local variable or method `irb' for main:Object
+from (pry):3:in `<main>'

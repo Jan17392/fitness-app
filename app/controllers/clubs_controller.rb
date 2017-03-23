@@ -8,7 +8,7 @@ class ClubsController < ApplicationController
 
   def new
     @club = Club.new
-    render layout: false
+    render layout: 'club_selection'
   end
 
   def delete
@@ -24,15 +24,7 @@ class ClubsController < ApplicationController
 
   def select_club
     @clubs = Club.where(user_id: current_user.id)
-    render layout: false
-  end
-
-  def new_club
-    @club = Club.new
-    render layout: false
-  end
-
-  def create_club
+    render layout: 'club_selection'
   end
 
   def club_params
