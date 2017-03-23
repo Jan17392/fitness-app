@@ -18,7 +18,7 @@ class ClubsController < ApplicationController
   end
 
   def create
-    @club = Club.create!(club_params)
+    @club = Club.create(club_params)
     redirect_to root_path
   end
 
