@@ -25,7 +25,7 @@
                   </div>
                   <div class="x_content">
 
-                    <%= simple_form_for new_club_customer_path do |f| %>
+                    <%= simple_form_for @customer, :url => club_customers_path, :method => :post do |f| %>
                       <%= f.input :first_name %>
                       <%= f.input :last_name %>
                       <%= f.input :email %>
@@ -39,15 +39,8 @@
                       %>
                       <%= f.input :gender %>
                       <%= f.input :photo %>
-                      <%= f.button :submit, "Create new Customer" %>
+                      <%= f.button :submit, "Create Customer" %>
                     <% end %>
-
-
-
-
-
-
-
 
                    </div>
                 </div>

@@ -38,14 +38,14 @@
                         </tr>
                       </thead>
                       <tbody>
-                      <% @customers.each do |customer| %>
+                      <% @bookings.each do |booking| %>
                         <tr>
-                          <td><%= customer.first_name %></td>
+                          <td><%= booking.name %></td>
                           <td>System Architect</td>
                           <td>Edinburgh</td>
                           <td>61</td>
                           <td>2011/04/25</td>
-                          <td><%= link_to('Edit this Customer', '/') %></td>
+                          <td><%= link_to('Change to this Club', '/') %></td>
                         </tr>
                       <% end %>
                       </tbody>
@@ -53,3 +53,4 @@
                   </div>
                 </div>
               </div>
+

@@ -1,0 +1,36 @@
+            <div class="clearfix"></div>
+
+            <div class="row">
+
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Create a Additional Service <small>new</small></h2>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+
+                    <%= simple_form_for @service, :url => club_additional_services_path, :method => :post do |f| %>
+                      <%= f.input :name %>
+                      <%= f.input :fee %>
+                      <%= f.input :description %>
+                      <%= f.input :club_id, :as => :hidden, input_html: { value: @club } %>
+                      <%= f.button :submit, "Create Additional Service" %>
+                    <% end %>
+
+                   </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+

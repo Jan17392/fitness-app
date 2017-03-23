@@ -39,41 +39,53 @@
           <div class="menu_section">
             <h3>General</h3>
             <ul class="nav side-menu">
-              <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+              <li><a><i class="fa fa-home"></i> Dashboard <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                   <li><a href="index.html">Dashboard</a></li>
-                  <li><a href="index2.html">Dashboard2</a></li>
-                  <li><a href="index3.html">Dashboard3</a></li>
                 </ul>
               </li>
-              <li><a><i class="fa fa-edit"></i> Clubs <span class="fa fa-chevron-down"></span></a>
+              <li><a><i class="fa fa-building-o"></i> Clubs <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                   <li><%= link_to('My Clubs', clubs_path(params[:club_id])) %></li>
                 </ul>
               </li>
-              <li><a><i class="fa fa-edit"></i> Customers <span class="fa fa-chevron-down"></span></a>
+              <li><a><i class="fa fa-users"></i> Customers <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                   <li><%= link_to('All Customers', club_customers_path(params[:club_id])) %></li>
                   <li><%= link_to('Create Customer', new_club_customer_path(params[:club_id])) %></li>
                 </ul>
               </li>
-              <li><a><i class="fa fa-edit"></i> Training Rooms <span class="fa fa-chevron-down"></span></a>
+              <li><a><i class="fa fa-trophy"></i> Training Rooms <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
+                <li><%= link_to('All Rooms', club_training_rooms_path(params[:club_id])) %></li>
+                  <li><%= link_to('Create Room', new_club_training_room_path(params[:club_id])) %></li>
                 </ul>
               </li>
-              <li><a><i class="fa fa-edit"></i> Trainers <span class="fa fa-chevron-down"></span></a>
+              <li><a><i class="fa fa-suitcase"></i> Employees <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
+                <li><%= link_to('All Employees', club_employees_path(params[:club_id])) %></li>
+                  <li><%= link_to('Create Employee', new_club_employee_path(params[:club_id])) %></li>
                 </ul>
               </li>
-              <li><a><i class="fa fa-edit"></i> Trainings <span class="fa fa-chevron-down"></span></a>
+              <li><a><i class="fa fa-unlock"></i> Employee Type <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
+                <li><%= link_to('All Employee Types', club_employee_types_path(params[:club_id])) %></li>
+                  <li><%= link_to('Create Employee Type', new_club_employee_type_path(params[:club_id])) %></li>
                 </ul>
               </li>
-              <li><a><i class="fa fa-edit"></i> Clubs <span class="fa fa-chevron-down"></span></a>
+              <li><a><i class="fa fa-calendar-o"></i> Training Courses <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
+                <li><%= link_to('All Trainings', club_training_courses_path(params[:club_id])) %></li>
+                  <li><%= link_to('Create Customer', new_club_training_course_path(params[:club_id])) %></li>
                 </ul>
               </li>
-              <li><a><i class="fa fa-edit"></i> Invoices <span class="fa fa-chevron-down"></span></a>
+              <li><a><i class="fa fa-smile-o"></i> Additional Services <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                <li><%= link_to('All Services', club_additional_services_path(params[:club_id])) %></li>
+                  <li><%= link_to('Create Service', new_club_additional_service_path(params[:club_id])) %></li>
+                </ul>
+              </li>
+              <li><a><i class="fa fa-money"></i> Invoices <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                 </ul>
               </li>
@@ -160,14 +172,6 @@
     </div>
     <!-- /CUSTOM CONTENT -->
 
-    <!-- footer content -->
-    <footer>
-      <div class="pull-right">
-        Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
-      </div>
-      <div class="clearfix"></div>
-    </footer>
-    <!-- /footer content -->
   </div>
 </div>
 

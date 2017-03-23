@@ -41,6 +41,7 @@ GEM
     arel (7.1.4)
     autoprefixer-rails (6.7.7.1)
       execjs
+    bcrypt (3.1.11)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -76,8 +77,16 @@ GEM
     datejs-rails (2.0.1)
       railties (>= 3.1)
     debug_inspector (0.0.2)
+    devise (4.2.0)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0, < 5.1)
+      responders
+      warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.7.0)
+    faker (1.7.3)
+      i18n (~> 0.5)
     fastclick-rails (1.0.1)
     ffi (1.9.18)
     figaro (1.1.1)
@@ -141,6 +150,7 @@ GEM
     nokogiri (1.7.1)
       mini_portile2 (~> 2.1.0)
     nprogress-rails (0.2.0.2)
+    orm_adapter (0.5.0)
     parsley-rails (2.6.2.0)
       railties (>= 3.0.0)
     pg (0.20.0)
@@ -185,6 +195,8 @@ GEM
     rb-inotify (0.9.8)
       ffi (>= 0.5.0)
     redis (3.3.3)
+    responders (2.3.0)
+      railties (>= 4.2.0, < 5.1)
     sass (3.4.23)
     sass-rails (5.0.6)
       railties (>= 4.0.0, < 6)
@@ -223,6 +235,8 @@ GEM
     uglifier (3.1.9)
       execjs (>= 0.3.0, < 3)
     unicode_utils (1.4.0)
+    warden (1.2.7)
+      rack (>= 1.0)
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
@@ -237,6 +251,8 @@ DEPENDENCIES
   bootstrap-sass
   coffee-rails (~> 4.1.0)
   country_select
+  devise
+  faker
   figaro
   font-awesome-sass
   gentelella-rails
