@@ -25,10 +25,10 @@ group :development, :test do
   gem 'spring'
   gem 'listen', '~> 3.0.5'
   gem 'spring-watcher-listen', '~> 2.0.0'
-
-  gem 'faker'
 end
 
+# Populating DB with fake data -> when done, more to dev group, shouldnt be on production
+gem 'faker'
 
 # Admin Theme
 gem 'gentelella-rails'
