@@ -39,3 +39,6 @@ gem 'country_select'
 
 # Devise
 gem 'devise'
+
+# Authorization for Actions
+gem "pundit"

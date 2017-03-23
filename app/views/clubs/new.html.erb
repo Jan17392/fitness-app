@@ -6,5 +6,6 @@
   <%= f.input :country %>
   <%= f.input :street_no %>
   <%= f.input :description %>
+  <%= f.input :user_id, :as => :hidden, input_html: { value: current_user.id } %>
   <%= f.button :submit, "Create Club" %>
 <% end %>

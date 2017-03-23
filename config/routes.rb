@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
 
-
-
   devise_for :users
 
   resources :clubs do
     resources :customers
+    resources :clubs
     resources :training_courses
     resources :training_rooms
     resources :training_bookings

@@ -27,7 +27,7 @@
           </div>
           <div class="profile_info">
             <span>Welcome,</span>
-            <h2>John Doe</h2>
+            <h2><%= current_user.email %></h2>
           </div>
         </div>
         <!-- /menu profile quick info -->
@@ -46,7 +46,8 @@
               </li>
               <li><a><i class="fa fa-building-o"></i> Clubs <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
-                  <li><%= link_to('My Clubs', clubs_path(params[:club_id])) %></li>
+                  <li><%= link_to('My Clubs', club_clubs_path(params[:club_id])) %></li>
+                  <li><%= link_to('Create Club', new_club_club_path(params[:club_id])) %></li>
                 </ul>
               </li>
               <li><a><i class="fa fa-users"></i> Customers <span class="fa fa-chevron-down"></span></a>
@@ -105,7 +106,7 @@
           <a data-toggle="tooltip" data-placement="top" title="Lock">
             <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
           </a>
-          <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+          <a data-toggle="tooltip" data-placement="top" title="Logout" href=<%= destroy_user_session_path %>>
             <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
           </a>
         </div>

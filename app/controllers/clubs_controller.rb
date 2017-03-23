@@ -1,11 +1,9 @@
 class ClubsController < ApplicationController
   def show
-    @clubs = Club.all
   end
 
   def index
-    @clubs = Club.all
-    render layout: 'application_no_club'
+    @clubs = Club.where(user_id: current_user.id)
   end
 
   def new
@@ -25,7 +23,7 @@ class ClubsController < ApplicationController
   end
 
   def select_club
-    @clubs = Club.all
+    @clubs = Club.where(user_id: current_user.id)
     render layout: false
   end
 
@@ -45,7 +43,8 @@ class ClubsController < ApplicationController
       :postcode,
       :country,
       :street_no,
-      :description
+      :description,
+      :user_id
     )
   end
 
